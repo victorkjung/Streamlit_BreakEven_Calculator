@@ -21,10 +21,10 @@ formatted_total_fixed_costs = locale.format_string("%.2f", total_fixed_costs, gr
 formatted_variable_costs_per_unit = locale.format_string("%.2f", variable_costs_per_unit, grouping=True)
 
 st.write("Formatted Inputs:")
-st.write("Number of units:", formatted_units)
-st.write("Selling price per unit:", formatted_sell_price_per_unit)
-st.write("Total fixed costs:", formatted_total_fixed_costs)
-st.write("Variable cost per unit:", formatted_variable_costs_per_unit)
+st.write("Number of units:", f"{formatted_units:,}")
+st.write("Selling price per unit:", f"${formatted_sell_price_per_unit}")
+st.write("Total fixed costs:", f"${formatted_total_fixed_costs}")
+st.write("Variable cost per unit:", f"${formatted_variable_costs_per_unit}")
 
 # Creating a progress bar
 latest_iteration = st.empty()
@@ -50,6 +50,6 @@ st.markdown(f'<h4>Total costs: ${total_costs:,.2f}</h4>', unsafe_allow_html=True
 st.markdown(f'<h4>The break-even point is at {break_even_units:,.2f} units.</h4>', unsafe_allow_html=True)
 
 if units >= break_even_units:
-    st.markdown(f'<h3>&#x2705; With {units:,.2f} units, you have reached the break-even point. &#x1F3CB;&#x200D;&#x2640;&#xFE0F;&#x1F44A;&#x1F451;</h3>', unsafe_allow_html=True)
+    st.markdown(f'<h4>&#x2705; With {units:,.2f} units, you have reached the break-even point. &#x1F3CB;&#x200D;&#x2640;&#xFE0F;&#x1F44A;&#x1F451;</h4>', unsafe_allow_html=True)
 else:
-    st.markdown(f'<h3>&#x1F198; With {units:,.2f} units, you have <font color="red">not</font> reached the break-even point. You need to sell {break_even_units - units:,.2f} more units to break even. &#x1F60E;</h3>', unsafe_allow_html=True)
+    st.markdown(f'<h4>&#x1F198; With {units:,.2f} units, you have <font color="red">not</font> reached the break-even point. You need to sell {break_even_units - units:,.2f} more units to break even. &#x1F60E;</h4>', unsafe_allow_html=True)
