@@ -17,7 +17,7 @@ formatted_total_fixed_costs = "{:,.2f}".format(total_fixed_costs)
 formatted_variable_costs_per_unit = "{:,.2f}".format(variable_costs_per_unit)
 
 # Display formatted inputs
-st.write("Formatted Inputs:")
+st.write("Here are your entries:")
 st.write("Number of units:", formatted_units)
 st.write("Selling price per unit:", f"${formatted_sell_price_per_unit}")
 st.write("Total fixed costs:", f"${formatted_total_fixed_costs}")
