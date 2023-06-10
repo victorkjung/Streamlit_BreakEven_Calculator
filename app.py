@@ -1,12 +1,8 @@
 import streamlit as st
 import time
-import locale
 
 st.title(':smile: Break-Even Analysis')
 st.title('How many :red[_units_] do you need to sell?')
-
-# Set locale to use thousand separators
-locale.setlocale(locale.LC_ALL, '')
 
 # Inputs
 units = int(st.text_input('Guess the Number of units', value='0').replace(',', ''))
@@ -15,10 +11,10 @@ total_fixed_costs = float(st.text_input('Total fixed costs', value='1000.00').re
 variable_costs_per_unit = float(st.text_input('Variable cost per unit', value='5.00').replace(',', ''))
 
 # Format inputs with thousand separators
-formatted_units = locale.format_string("%,d", units, grouping=True)
-formatted_sell_price_per_unit = locale.format_string("%.2f", sell_price_per_unit)
-formatted_total_fixed_costs = locale.format_string("%.2f", total_fixed_costs)
-formatted_variable_costs_per_unit = locale.format_string("%.2f", variable_costs_per_unit)
+formatted_units = "{:,}".format(units)
+formatted_sell_price_per_unit = "{:,.2f}".format(sell_price_per_unit)
+formatted_total_fixed_costs = "{:,.2f}".format(total_fixed_costs)
+formatted_variable_costs_per_unit = "{:,.2f}".format(variable_costs_per_unit)
 
 # Display formatted inputs
 st.write("Formatted Inputs:")
@@ -54,5 +50,5 @@ if units >= break_even_units:
     st.markdown(f'<h4>&#x2705; With {formatted_units} units, you have reached the break-even point. &#x1F3CB;&#x200D;&#x2640;&#xFE0F;&#x1F44A;&#x1F451;</h4>', unsafe_allow_html=True)
 else:
     units_needed = break_even_units - units
-    formatted_units_needed = locale.format_string("%,d", units_needed, grouping=True)
+    formatted_units_needed = "{:,}".format(units_needed)
     st.markdown(f'<h4>&#x1F198; With {formatted_units} units, you have <font color="red">not</font> reached the break-even point. You need to sell {formatted_units_needed} more units to break even. &#x1F60E;</h4>', unsafe_allow_html=True)
