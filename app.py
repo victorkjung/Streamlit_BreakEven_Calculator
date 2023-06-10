@@ -45,11 +45,11 @@ total_costs = total_fixed_costs + total_variable_costs
 break_even_units = total_fixed_costs / (sell_price_per_unit - variable_costs_per_unit)
 
 # Display the results with increased font size
-st.markdown(f'<h3>Total revenue: ${total_revenue:,.2f}</h3>', unsafe_allow_html=True)
-st.markdown(f'<h3>Total costs: ${total_costs:,.2f}</h3>', unsafe_allow_html=True)
-st.markdown(f'<h3>:white_check_mark: The break-even point is at {break_even_units:,.2f} units.</h3>', unsafe_allow_html=True)
+st.markdown(f'<h4>Total revenue: ${total_revenue:,.2f}</h3>', unsafe_allow_html=True)
+st.markdown(f'<h4>Total costs: ${total_costs:,.2f}</h3>', unsafe_allow_html=True)
+st.markdown(f'<h4>:white_check_mark: The break-even point is at {break_even_units:,.2f} units.</h3>', unsafe_allow_html=True)
 
 if units >= break_even_units:
-    st.markdown(f':100:<h3>With {units:,.2f} units, you have reached the break-even point.</h3>', unsafe_allow_html=True)
+    st.markdown(f'<h3>With {units:,.2f} units, you have reached the break-even point.</h3>', unsafe_allow_html=True)
 else:
     st.markdown(f'<h3>With {units:,.2f} units, you have <font color="red">not</font> reached the break-even point. You need to sell {break_even_units - units:,.2f} more units to break even.</h3>', unsafe_allow_html=True)
