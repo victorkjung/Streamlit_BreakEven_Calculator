@@ -6,9 +6,9 @@ st.title('How many :red[_units_] do you need to sell?')
 
 # Inputs
 units = int(st.text_input('Guess the Number of units', value='0').replace(',', ''))
-sell_price_per_unit = float(st.text_input('Selling price per unit', value='0.00').replace(',', ''))
-total_fixed_costs = float(st.text_input('Total fixed costs', value='0.00').replace(',', ''))
-variable_costs_per_unit = float(st.text_input('Variable cost per unit', value='0.00').replace(',', ''))
+sell_price_per_unit = float(st.text_input('Selling price per unit', value='10.00').replace(',', ''))
+total_fixed_costs = float(st.text_input('Total fixed costs', value='1000.00').replace(',', ''))
+variable_costs_per_unit = float(st.text_input('Variable cost per unit', value='5.00').replace(',', ''))
 
 # Creating a progress bar
 latest_iteration = st.empty()
