@@ -21,7 +21,7 @@ formatted_total_fixed_costs = locale.format_string("%.2f", total_fixed_costs, gr
 formatted_variable_costs_per_unit = locale.format_string("%.2f", variable_costs_per_unit, grouping=True)
 
 st.write("Formatted Inputs:")
-st.write("Number of units:", f"{formatted_units}")
+st.write("Number of units:", f"{formatted_units:,}")
 st.write("Selling price per unit:", f"${formatted_sell_price_per_unit}")
 st.write("Total fixed costs:", f"${formatted_total_fixed_costs}")
 st.write("Variable cost per unit:", f"${formatted_variable_costs_per_unit}")
