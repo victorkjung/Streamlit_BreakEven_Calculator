@@ -14,14 +14,15 @@ sell_price_per_unit = float(st.text_input('Selling price per unit', value='10.00
 total_fixed_costs = float(st.text_input('Total fixed costs', value='1000.00').replace(',', ''))
 variable_costs_per_unit = float(st.text_input('Variable cost per unit', value='5.00').replace(',', ''))
 
-# Display formatted inputs
-formatted_units = locale.format_string("%d", units, grouping=True)
-formatted_sell_price_per_unit = locale.format_string("%.2f", sell_price_per_unit, grouping=True)
-formatted_total_fixed_costs = locale.format_string("%.2f", total_fixed_costs, grouping=True)
-formatted_variable_costs_per_unit = locale.format_string("%.2f", variable_costs_per_unit, grouping=True)
+# Format inputs with thousand separators
+formatted_units = locale.format_string("%,d", units, grouping=True)
+formatted_sell_price_per_unit = locale.format_string("%.2f", sell_price_per_unit)
+formatted_total_fixed_costs = locale.format_string("%.2f", total_fixed_costs)
+formatted_variable_costs_per_unit = locale.format_string("%.2f", variable_costs_per_unit)
 
+# Display formatted inputs
 st.write("Formatted Inputs:")
-st.write("Number of units:",formatted_units)
+st.write("Number of units:", formatted_units)
 st.write("Selling price per unit:", f"${formatted_sell_price_per_unit}")
 st.write("Total fixed costs:", f"${formatted_total_fixed_costs}")
 st.write("Variable cost per unit:", f"${formatted_variable_costs_per_unit}")
