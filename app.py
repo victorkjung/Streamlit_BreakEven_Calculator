@@ -1,7 +1,7 @@
 import streamlit as st
 import time
 
-st.title(':smile: Break-Even Analysis')
+st.title(':smile: Break-Even Analyzer')
 st.title('How many :red[_units_] do you need to sell?')
 
 # Inputs
@@ -51,4 +51,4 @@ if units >= break_even_units:
 else:
     units_needed = break_even_units - units
     formatted_units_needed = "{:,}".format(units_needed)
-    st.markdown(f'<h4>&#x1F198; With {formatted_units} units, you have <font color="red">not</font> reached the break-even point. You need to sell {formatted_units_needed} more units to break even. &#x1F60E;</h4>', unsafe_allow_html=True)
+    st.markdown(f'<h3>&#x1F198; With {formatted_units} units, you have <font color="red">not</font> reached the break-even point. You need to sell {formatted_units_needed} more units to break even. &#x1F60E;</h3>', unsafe_allow_html=True)
