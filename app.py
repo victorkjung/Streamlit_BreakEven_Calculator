@@ -2,9 +2,10 @@ import streamlit as st
 import time
 
 st.title('Break-Even Analysis Calculator')
+st.title('How many units do you need to sell?')
 
 # Inputs
-units = int(st.text_input('Number of units', value='100').replace(',', ''))
+units = int(st.text_input('Guess the Number of units', value='100').replace(',', ''))
 sell_price_per_unit = float(st.text_input('Selling price per unit', value='50.00').replace(',', ''))
 total_fixed_costs = float(st.text_input('Total fixed costs', value='1000.00').replace(',', ''))
 variable_costs_per_unit = float(st.text_input('Variable cost per unit', value='10.00').replace(',', ''))
