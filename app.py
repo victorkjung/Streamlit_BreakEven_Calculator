@@ -2,7 +2,7 @@ import streamlit as st
 import time
 
 st.title(':smile: Break-Even Analysis')
-st.title('How many :red[_UNITS_] do you need to sell?')
+st.title('How many :red[_units_] do you need to sell?')
 
 # Inputs
 units = int(st.text_input('Guess the Number of units', value='100').replace(',', ''))
