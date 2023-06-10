@@ -1,8 +1,8 @@
 import streamlit as st
 import time
 
-st.title('Break-Even Analysis Calculator')
-st.title('How many units do you need to sell?')
+st.title(':smile: Break-Even Analysis')
+st.title('How many :red[units] do you need to sell?')
 
 # Inputs
 units = int(st.text_input('Guess the Number of units', value='100').replace(',', ''))
