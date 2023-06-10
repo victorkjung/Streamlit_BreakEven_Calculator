@@ -34,6 +34,6 @@ st.write(f'Total costs: ${total_costs:,.2f}')
 st.write(f':white_check_mark: The break-even point is at {break_even_units:,.2f} units.')
 
 if units >= break_even_units:
-    st.write(f'With {units:,.2f} units, you have reached the break-even point.')
+    st.write(f':100: With {units:,.2f} units, you have reached the break-even point. :woman-lifting-weights: :punch: :crown:')
 else:
-    st.write(f'With {units:,.2f} units, you have not reached the break-even point. You need to sell {break_even_units - units:,.2f} more units to break even.')
+    st.write(f':sos: With {units:,.2f} units, you have :red[not] reached the break-even point. You need to sell {break_even_units - units:,.2f} more units to break even. :sunglasses:')
