@@ -4,10 +4,10 @@ import time
 st.title('Break-Even Analysis Calculator')
 
 # Inputs
-units = st.number_input('Number of units', value=100, step=10)
-sell_price_per_unit = st.number_input('Selling price per unit', value=50.0)
-total_fixed_costs = st.number_input('Total fixed costs', value=1000.0)
-variable_costs_per_unit = st.number_input('Variable cost per unit', value=10.0)
+units = int(st.text_input('Number of units', value='100').replace(',', ''))
+sell_price_per_unit = float(st.text_input('Selling price per unit', value='50.00').replace(',', ''))
+total_fixed_costs = float(st.text_input('Total fixed costs', value='1000.00').replace(',', ''))
+variable_costs_per_unit = float(st.text_input('Variable cost per unit', value='10.00').replace(',', ''))
 
 # Creating a progress bar
 latest_iteration = st.empty()
