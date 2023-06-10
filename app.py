@@ -31,7 +31,7 @@ break_even_units = total_fixed_costs / (sell_price_per_unit - variable_costs_per
 # Display the results
 st.write(f'Total revenue: ${total_revenue:,.2f}')
 st.write(f'Total costs: ${total_costs:,.2f}')
-st.write(f'The break-even point is at {break_even_units:,.2f} units.')
+st.write(f':white_check_mark: The break-even point is at {break_even_units:,.2f} units.')
 
 if units >= break_even_units:
     st.write(f'With {units:,.2f} units, you have reached the break-even point.')
