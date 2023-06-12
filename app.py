@@ -12,7 +12,7 @@ st.sidebar.write("1. Enter the values for your inputs in the respective fields."
 st.sidebar.write("2. Your cost inputs should be represented as are daily rate. For example, if the weekly hourly payroll is **14,000** per week and you are open seven days a week, then you would input **2000** in the hourly paroll field. And if your property insurance is **36,500** a year, then you would input **100** in the property insurance field.")
 st.sidebar.write("3. Variable cost per unit is the wholesale cost of item you are selling. For example if your invoice is **1,200 for 100 units**. You would input **1.20** in variable cost per unit field.")
 
-st.title(':smile: Break-Even Analyzer')
+st.title(':smile: Retail Store Dilemna')
 st.title('How many :red[_units_] do you need to sell?')
 
 # Inputs
