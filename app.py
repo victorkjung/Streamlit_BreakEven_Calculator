@@ -9,7 +9,8 @@ st.sidebar.write("Welcome to the Break Even Analysis Calculator. This tool helps
 # Add instructions to the sidebar
 st.sidebar.subheader("Instructions:")
 st.sidebar.write("1. Enter the values for your inputs in the respective fields.")
-st.sidebar.write("2. Click on the 'Calculate' button to see the results.")
+st.sidebar.write("2. Your cost inputs should be represented as are daily rate. For example, if the weekly hourly payroll is $14,000 per week, and you are open seven days a week, then you would input 2000 in the hourly paroll field. And if your property insurance is $36,500 a year, then you would input 100 in the property insurance field.")
+st.sidebar.write("3. Variable cost per unit is the wholesale cost of item you are selling. For example if your invoice is $1,200 for 100 units. You would input 1.20 in variable cost per unit field.")
 
 st.title(':smile: Break-Even Analyzer')
 st.title('How many :red[_units_] do you need to sell?')
@@ -49,13 +50,20 @@ total_fixed_costs = total_payroll_expense + total_occupancy_expense + total_oper
 
 # Format fixed costs with thousand separators
 formatted_total_fixed_costs = "{:,.2f}".format(total_fixed_costs)
+formatted_total_payroll_expense = "{:,.2f}".format(total_payroll_expense)
+formatted_total_occupancy_expense = "{:,.2f}".format(total_occupancy_expense)
+formatted_total_operating_expense = "{:,.2f}".format(total_operating_expense)
 
 # Display formatted inputs
-st.write("Here are your entries:")
+st.write("Here are your summary entries:")
 st.write("Number of units:", formatted_units)
 st.write("Selling price per unit:", f"${formatted_sell_price_per_unit}")
 st.write("Variable cost per unit:", f"${variable_costs_per_unit}")
 st.write("Total fixed costs:", f"${formatted_total_fixed_costs}")
+st.write("Here are your fixed cost components:")
+st.write("Total payroll expense:", f"${formatted_total_payroll_expense}")
+st.write("Total occcupancy expense:", f"${formatted_total_occupancy_expense}")
+st.write("Total operatinf expense:", f"${formatted_total_operating_expense}")
 
 # Creating a progress bar
 latest_iteration = st.empty()
