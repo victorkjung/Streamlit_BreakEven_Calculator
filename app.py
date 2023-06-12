@@ -80,7 +80,8 @@ st.write("Total fixed costs:", f"${formatted_total_fixed_costs}")
 st.write("**Here are your fixed cost components:**")
 st.write("Total payroll expense:", f"${formatted_total_payroll_expense}")
 st.write("Total occcupancy expense:", f"${formatted_total_occupancy_expense}")
-st.write("Total op expense:", f"${formatted_total_operating_expense}")
+st.write("Total operating expense:", f"${formatted_total_operating_expense}")
+
 
 # Creating a progress bar
 latest_iteration = st.empty()
