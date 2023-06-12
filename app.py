@@ -68,6 +68,9 @@ formatted_total_payroll_expense = "{:,.2f}".format(total_payroll_expense)
 formatted_total_occupancy_expense = "{:,.2f}".format(total_occupancy_expense)
 formatted_total_operating_expense = "{:,.2f}".format(total_operating_expense)
 
+# Format variable costs with thousand separators and decimals
+formatted_variable_costs_per_unit = "{:,.2f}".format(variable_costs_per_unit)
+
 # Display formatted inputs
 st.write("**Here are your summary entries:**")
 st.write("Number of units:", formatted_units)
@@ -77,7 +80,7 @@ st.write("Total fixed costs:", f"${formatted_total_fixed_costs}")
 st.write("**Here are your fixed cost components:**")
 st.write("Total payroll expense:", f"${formatted_total_payroll_expense}")
 st.write("Total occcupancy expense:", f"${formatted_total_occupancy_expense}")
-st.write("Total operatinf expense:", f"${formatted_total_operating_expense}")
+st.write("Total operating expense:", f"${formatted_total_operating_expense}")
 
 # Creating a progress bar
 latest_iteration = st.empty()
