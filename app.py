@@ -68,7 +68,7 @@ formatted_total_payroll_expense = "{:,.2f}".format(total_payroll_expense)
 formatted_total_occupancy_expense = "{:,.2f}".format(total_occupancy_expense)
 formatted_total_operating_expense = "{:,.2f}".format(total_operating_expense)
 
-# Format variable costs with thousand separators and decimals
+# Format variable costs with thousand separators
 formatted_variable_costs_per_unit = "{:,.2f}".format(variable_costs_per_unit)
 
 # Display formatted inputs
